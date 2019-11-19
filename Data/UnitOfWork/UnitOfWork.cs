@@ -1,9 +1,6 @@
 ﻿using Data.Repository;
 using Data.UnitOfWork.Interface;
 using Domain.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Data.UnitOfWork
 {

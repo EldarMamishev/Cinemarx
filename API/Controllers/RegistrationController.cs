@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.EntityService;
+using Business.EntityService.Interface;
 using Data.UnitOfWork.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ViewModel.ViewModel.Person;
 
@@ -15,7 +11,7 @@ namespace API.Controllers
     public class RegistrationController : ControllerBase
     {
         private IUnitOfWork unitOfWork;
-        private PersonService personService;
+        private IPersonService personService;
 
         [HttpPost]
         [Route("")]
@@ -37,7 +33,7 @@ namespace API.Controllers
             return this.Ok(userAccount);
         }
 
-        public RegistrationController(IUnitOfWork unitOfWork, PersonService personService)
+        public RegistrationController(IUnitOfWork unitOfWork, IPersonService personService)
         {
             this.unitOfWork = unitOfWork;
             this.personService = personService;
