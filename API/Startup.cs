@@ -23,8 +23,7 @@ namespace API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors();
 
-            services.AddDbContext<CinemarxContext>(optionBuilder
-                => optionBuilder.UseSqlite("Data Source=cinemarx.db"));
+            services.AddDbContext<CinemarxContext>();
 
             DependencyResolver.ConfigureDependencies(services);
         }

@@ -10,7 +10,7 @@ namespace Domain.Entity
         public virtual PersonEntity Person { get; set; }
         public int? PlaceId { get; set; }
         public virtual PlaceEntity Place { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public DateTime PurchasedDate { get; set; }
         public DateTime? RevertedDate { get; set; }
         public int? SessionId { get; set; }

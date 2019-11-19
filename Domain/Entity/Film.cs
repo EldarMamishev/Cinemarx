@@ -10,6 +10,6 @@ namespace Domain.Entity
         public string Caption { get; set; }
         public int Duration { get; set; }
         public ICollection<FilmInCinemaEntity> FilmInCinemas { get; set; }
-        public DateTime PremiereDate { get; set; }
+        public DateTime? PremiereDate { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace Domain.Entity
     public class PlaceEntity : EntityBase
     {
         public ClassOfPlace Class { get; set; }
-        public HallEntity Hall { get; set; }
+        public virtual HallEntity Hall { get; set; }
         public int? HallId { get; set; }
         public int PlaceLine { get; set; }
         public int PlaceNumber { get; set; }

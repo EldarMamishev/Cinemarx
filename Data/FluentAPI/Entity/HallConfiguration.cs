@@ -20,6 +20,11 @@ namespace Data.FluentAPI.Entity
                 .HasForeignKey(p => p.HallId)
                 .IsRequired(true);
 
+            builder.HasMany(h => h.Sessions)
+                .WithOne(p => p.Hall)
+                .HasForeignKey(p => p.HallId)
+                .IsRequired(true);
+
             builder.Property(p => p.Caption)
                 .IsRequired(true);
 

@@ -8,7 +8,7 @@ namespace Domain.Entity
     {
         public string Address { get; set; }
         public string Caption { get; set; }
-        public CinemaNetworkEntity CinemaNetwork { get; set; }
+        public virtual CinemaNetworkEntity CinemaNetwork { get; set; }
         public int? CinemaNetworkId { get; set; }
         public City City { get; set; }
         public string Description { get; set; }

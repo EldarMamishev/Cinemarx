@@ -7,7 +7,7 @@ namespace Domain.Entity
     public class HallEntity : EntityBase
     {
         public string Caption { get; set; }
-        public CinemaEntity Cinema { get; set; }
+        public virtual CinemaEntity Cinema { get; set; }
         public int? CinemaId { get; set; }
         public ICollection<PlaceEntity> Places { get; set; }
         public ICollection<SessionEntity> Sessions{ get; set; }

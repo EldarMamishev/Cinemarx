@@ -5,8 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191119194420_initial.cs" />
+    <Compile Remove="Migrations\20191119194420_initial.Designer.cs" />
+    <Compile Remove="Migrations\20191119195142_initial.cs" />
+    <Compile Remove="Migrations\20191119195142_initial.Designer.cs" />
+    <Compile Remove="Migrations\20191119195600_initial.cs" />
+    <Compile Remove="Migrations\20191119195600_initial.Designer.cs" />
+    <Compile Remove="Migrations\20191119200144_initial.cs" />
+    <Compile Remove="Migrations\20191119200144_initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
       <PrivateAssets>all</PrivateAssets>

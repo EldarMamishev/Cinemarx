@@ -10,19 +10,25 @@ namespace Data
         public CinemarxContext(DbContextOptions options) : base(options)
         { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=CinemarxDb;Trusted_Connection=True;");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<PersonEntity>().HasData(this.Initialize());
+
             new ModelConfigurationHandler().SetConfigurations(modelBuilder);
         }
 
-        private void Initialize()
+        private PersonEntity[] Initialize()
         {
-            var person = new PersonEntity() { Name = "Bob", Surname = "Smith", Email = "smithbob@gmail.com", Password = "00000", BirthDate = DateTime.Now.AddYears(-20), RegistrationDate = DateTime.Now };
-            this.People.Add(person);
-            
-            this.SaveChanges();
+            return new[] { 
+                new PersonEntity() { Id = 1, Name = "Bob", Surname = "Smith", Email = "smithbob@gmail.com", 
+                    Password = "00000", BirthDate = DateTime.Now.AddYears(-20), RegistrationDate = DateTime.Now }};
         }
 
         public DbSet<CinemaEntity> Families { get; set; }
