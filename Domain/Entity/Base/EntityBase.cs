@@ -7,7 +7,7 @@ namespace Domain.Entity.Base
 {
     public abstract class EntityBase : IValidatableObject
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public virtual IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
             => new ValidationResult[0];
