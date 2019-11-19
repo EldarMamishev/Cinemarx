@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.FluentAPI.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.FluentAPI
 {
@@ -6,15 +7,15 @@ namespace Data.FluentAPI
     {
         public void SetConfigurations(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new PersonConfiguration());
-            //modelBuilder.ApplyConfiguration(new FamilyConfiguration());
-            //modelBuilder.ApplyConfiguration(new PersonFamilyConfiguration());
-            //modelBuilder.ApplyConfiguration(new WalletConfiguration());
-            //modelBuilder.ApplyConfiguration(new PersonWalletConfiguration());
-            //modelBuilder.ApplyConfiguration(new OperationConfiguration());
-            //modelBuilder.ApplyConfiguration(new OperationInfoConfiguration());
-            //modelBuilder.ApplyConfiguration(new OperationCategoryConfiguration());
-            //modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
+            modelBuilder.ApplyConfiguration(new CinemaConfiguration());
+            modelBuilder.ApplyConfiguration(new CinemaNetworkConfiguration());
+            modelBuilder.ApplyConfiguration(new HallConfiguration());
+            modelBuilder.ApplyConfiguration(new TicketConfiguration());
+            modelBuilder.ApplyConfiguration(new PlaceConfiguration());
+            modelBuilder.ApplyConfiguration(new SessionConfiguration());
+            modelBuilder.ApplyConfiguration(new FilmInCinemaConfiguration());
+            modelBuilder.ApplyConfiguration(new FilmConfiguration());
         }
     }
 }

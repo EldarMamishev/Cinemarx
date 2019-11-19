@@ -1,5 +1,6 @@
 ﻿using Domain.Entity.Base;
 using Domain.Enum;
+using System.Collections.Generic;
 
 namespace Domain.Entity
 {
@@ -12,6 +13,8 @@ namespace Domain.Entity
         public City City { get; set; }
         public string Description { get; set; }
         public string Email { get; set; }
+        public ICollection<FilmInCinemaEntity> FilmInCinemas { get; set; }
+        public ICollection<HallEntity> Halls { get; set; }
         public string PhoneNumber { get; set; }
     }
 }

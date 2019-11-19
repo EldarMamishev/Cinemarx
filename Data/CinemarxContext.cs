@@ -1,6 +1,7 @@
 ﻿using Data.FluentAPI;
 using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Data
 {
@@ -18,7 +19,7 @@ namespace Data
 
         private void Initialize()
         {
-            var person = new PersonEntity() { Name = "Bob", Surname = "Smith", Email = "smithbob@gmail.com", Password = "00000" };
+            var person = new PersonEntity() { Name = "Bob", Surname = "Smith", Email = "smithbob@gmail.com", Password = "00000", BirthDate = DateTime.Now.AddYears(-20), RegistrationDate = DateTime.Now };
             this.People.Add(person);
             
             this.SaveChanges();

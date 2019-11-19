@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace API
 {
@@ -22,7 +23,8 @@ namespace API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors();
 
-            services.AddDbContext<CinemarxContext>();
+            services.AddDbContext<CinemarxContext>(optionBuilder
+                => optionBuilder.UseSqlite("Data Source=cinemarx.db"));
 
             DependencyResolver.ConfigureDependencies(services);
         }
