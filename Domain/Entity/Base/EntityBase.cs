@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+
+namespace Domain.Entity.Base
+{
+    public abstract class EntityBase : IValidatableObject
+    {
+        public int ID { get; set; }
+
+        public virtual IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+            => new ValidationResult[0];
+    }
+}
