@@ -14,6 +14,7 @@ namespace Domain.Entity
         public string Name { get; set; }
         public DateTime RegistrationDate { get; set; }
         public string Surname { get; set; }
+        public string Password { get; set; }
         public virtual ICollection<TicketEntity> Tickets { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -26,6 +27,7 @@ namespace Domain.Entity
 
             if (!Regex.IsMatch(this.Surname, pattern) || Regex.IsMatch(this.Name, antiPattern))
                 yield return new ValidationResult(nameof(Surname));
+
         }
     }
 }
