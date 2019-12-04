@@ -1,0 +1,189 @@
+<div class="mainContainer">
+
+  <header>
+
+    <div>
+      <p class="logo">CinemarX</p>
+
+      <p class="headerPoint">Фільми</p>
+      <p class="headerPoint">Акції</p>
+    </div>
+
+    <div class="elementsOfHeaderRightSide">
+
+      <div class="search">
+        <input type="text">
+        <div>
+          <div class="searchButton"><img src="../assets/Images/ImgForPresentationPage/search.png"></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="Auth">
+        <div>
+          <p class="Reg">Реєстрація</p>
+        </div>
+        <div>
+          <p class="Log">Вхід</p>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="Slides">
+
+      <!-- Slides *ngFor() -->
+      <div class="Slide" *ngFor="let i of slide">
+        <img [src]="i.img" alt="0">
+        <span class="SlideInformation">
+          <div>
+       <div>
+         <p>{{i.filmName}}</p>
+         <p><span>IMDB:</span> {{i.imdb}}/10</p>
+       </div>
+        <div>
+          <img src="../../../assets/Images/ImgForPresentationPage/Slides/whiteStarForSlide.png" alt="0">
+          <div><p>сеанси</p></div>
+        </div>
+            </div>
+        <p>+{{i.age}}</p>
+      </span>
+      </div>
+
+    </div>
+
+    <div class="SlidesControl">
+      <div *ngFor="let i of [0, 1, 2, 3, 4]" class="crcl" (click)="changeSlide(i)"></div>
+    </div>
+
+    <img class="ArrowDown" src="../../../assets/Images/ImgForPresentationPage/ArrowDown.png" alt="0">
+
+    <!-- New films -->
+
+    <div class="newFilms">
+
+      <p>НОВИНКИ</p>
+
+      <div class="FilmContainer">
+        <!-- First *ngFor determine number of rows -->
+        <div class="RowNewFilm" *ngFor="let i of [0, 1]">
+          <!-- Second *ngFor determine number of cells -->
+          <div *ngFor="let k of newFilms[i]" class="CertainFilm">
+            <img [src]="k.img" alt="0">
+            <span class="FilmConstraint">
+              <div>
+                <div [style.width]="k.technologies.length <= 3 ? '30px' : k.technologies.length >= 8 ? '80px' : '60px'">
+                  <p>{{k.technologies}}</p>
+                </div>
+                <div>
+                  <p>{{k.age}}</p>
+                </div>
+              </div>
+              <div>
+                <img src="../../../assets/Images/ImgForPresentationPage/NewFilms/star.png" alt="star">
+              </div>
+            </span>
+            <span class="newFilmInfo">
+              {{k.desc}}
+            </span>
+            <p class="FilmName">{{k.name}}</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <img class="ArrowDown ArrowDownNewFilm" src="../../../assets/Images/ImgForPresentationPage/ArrowDown.png" alt="0">
+
+    <!-- All films -->
+
+    <div class="allFilms">
+
+      <p>ФІЛЬМИ</p>
+
+      <!-- Filters -->
+      <div class="allFilmsFilters">
+
+        <div>
+          <img src="../../../assets/Images/ImgForPresentationPage/AllFilms/order.png" alt="0">
+          <img src="../../../assets/Images/ImgForPresentationPage/AllFilms/filter.png" alt="0">
+        </div>
+
+      </div>
+
+      <!-- Films -->
+
+
+      <div class="containerForAllFilms">
+        <!-- First *ngFor determine number of rows -->
+        <div class="rowAllFilms" *ngFor="let i of displayFilmsScope">
+          <!-- Second *ngFor determine number of cells -->
+          <div class="certainFilmAll" *ngFor="let k of allFilms[i]">
+            <img [src]="k.img" alt="0">
+            <span class="allFilmConstraint">
+              <div>
+                <div [style.width]="k.technologies.length <= 3 ? '30px' : k.technologies.length >= 8 ? '80px' : '60px'">
+                  <p>{{k.technologies}}</p>
+                </div>
+                <div>
+                  <p>{{k.age}}</p>
+                </div>
+              </div>
+              <div>
+                <img src="../../../assets/Images/ImgForPresentationPage/NewFilms/star.png" alt="star">
+              </div>
+            </span>
+            <p class="FilmName">{{k.name}}</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Arrow right and left -->
+      <div class="RLControl">
+
+        <img class="leftArrow" src="../../../assets/Images/ImgForPresentationPage/AllFilms/leftArrowGrey.png"
+             alt="left" (click)="previousPage()">
+        <!-- number of page -->
+        <div>
+          <p>{{displayFilmsScope[0] == 0 ? 1 : displayFilmsScope[0]}}/{{mathRound(allFilms.length / 2)}}</p>
+        </div>
+
+        <img class="rightArrow" src="../../../assets/Images/ImgForPresentationPage/AllFilms/leftArrowRed.png"
+             alt="right" (click)="nextPage()">
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      <p>Про нас</p>
+      <p>Правила та виимоги <span>Cinemarx</span></p>
+      <p>Рус | Укр | Eng</p>
+    </div>
+
+    <div>
+      <p>ВСІ ПРАВА ЗАХИЩЕНІ©2019</p>
+    </div>
+
+    <div>
+      <p>Допомога</p>
+      <p>Технічна підтримка</p>
+      <p>+380685342842</p>
+    </div>
+
+  </footer>
+
+</div>
