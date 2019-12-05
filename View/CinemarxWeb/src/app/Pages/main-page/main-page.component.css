@@ -1,0 +1,1133 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 4.5px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #000000;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Avenir Next";
+  margin-left: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bd2626;
+}
+
+header > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header > div:nth-child(1) > p:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+header > div:nth-child(1) > p:nth-child(3) {
+  margin-left: 50px;
+}
+
+.headerPoint {
+  font-family: "Avenir Next";
+  font-size: 12.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.headerPoint:nth-child(2) {
+  margin-left: 50px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+}
+
+.search > input {
+  width: 138.5px;
+  height: 17px;
+  background-color: rgba(0, 0, 0, 0);
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: solid 1.5px #ffffff;
+  outline: none;
+
+  font-family: "Avenir Next";
+  font-size: 12.5px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #636363;
+
+}
+
+.search > div > div:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.search > div > button > img {
+
+
+}
+
+.search > div > div:nth-child(2) {
+  border: solid 1px #ffffff;
+  border-top-right-radius: 10px;
+  width: 17px;
+  background-color: #ffffff;
+}
+
+.searchButton, img {
+  width: 17px;
+  height: 17px;
+}
+
+.elementsOfHeaderRightSide {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15px;
+}
+
+.Auth {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-content: space-between;
+  margin-left: 38px;
+}
+
+.Reg {
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Reg:hover {
+  opacity: 0.7;
+}
+
+.Log {
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Log:hover {
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Slides {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  height: 800px;
+}
+
+.Slide {
+  width: 1350px;
+  height: 800px;
+  box-shadow: 5px 8.5px 6px 10.5px rgba(0, 0, 0, 0.5);
+  border: solid 1px #ffffff;
+  background-color: #d8d8d8;
+  position: relative;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+/* -- */
+.Slide {
+  position: absolute;
+}
+
+.Slide:nth-child(1) {
+  opacity: 1;
+}
+
+.Slide:nth-child(2) {
+  opacity: 0.5;
+  transform: translateX(102%);
+  cursor: pointer;
+}
+
+.Slide:last-child {
+  opacity: 0.5;
+  transform: translateX(-102%);
+  cursor: pointer;
+}
+
+.Slide {
+
+}
+
+.Slide > img {
+  width: 1350px;
+  height: 800px;
+}
+
+
+.SlidesControl {
+  width: 165px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.SlideInformation {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
+  top: 600px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+
+.SlideInformation > div {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.SlideInformation > p {
+  font-family: "Avenir Next";
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+
+.SlideInformation > div > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: 13px;
+}
+
+.SlideInformation > div > div:nth-child(1) > p {
+  font-family: "Avenir Next";
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.SlideInformation > div > div:nth-child(1) > p:nth-child(1) {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.SlideInformation > div > div:nth-child(1) > p:nth-child(2) {
+  margin-top: -20px;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.SlideInformation > div > div:nth-child(1) > p:nth-child(2) > span {
+  font-weight: bold;
+}
+
+.SlideInformation > div > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.SlideInformation > div > div:nth-child(2) > img {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.SlideInformation > div > div:nth-child(2) > img:hover {
+  opacity: 0.7;
+}
+
+.SlideInformation > div > div:nth-child(2) > div {
+  margin-left: 20px;
+  border: solid 1px #ffffff;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100px;
+  height: 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.SlideInformation > div > div:nth-child(2) > div:hover {
+  opacity: 0.7;
+}
+
+.SlideInformation > div > div:nth-child(2) > div > p {
+  font-family: "Avenir Next";
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  height: 28px;
+}
+
+.crcl {
+  width: 17px;
+  height: 17px;
+  border-radius: 30px;
+  box-shadow: inset 0 2px 2.5px 1px rgba(0, 0, 0, 0.5);
+  border: solid 1px #000000;
+  background-color: #bd2626;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.crcl:hover {
+  background-color: #6a1b1b;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-color: #000000;
+  margin-top: 40px;
+}
+
+footer > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+footer > div > p {
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+footer > div:nth-child(2) {
+  bottom: 5px;
+}
+
+footer > div:nth-child(1) > p:hover,
+footer > div:nth-child(3) > p:nth-child(1):hover,
+footer > div:nth-child(3) > p:nth-child(2):hover {
+  color: #5c5e63;
+}
+
+footer > div:nth-child(1) {
+  margin-left: 5px;
+}
+
+footer > div:nth-child(1) > p > span {
+  font-weight: bold;
+  color: #bd2626;
+}
+
+footer > div:nth-child(2) {
+  justify-content: flex-end;
+}
+
+footer > div:nth-child(2) > p {
+  cursor: default;
+}
+
+footer > div:nth-child(3) {
+  margin-right: 5px;
+}
+
+footer > div:nth-child(3) > p:nth-child(3) {
+  cursor: default;
+}
+
+.ArrowDown {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.newFilms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+.newFilms > p {
+  font-family: "Avenir Next";
+  height: 30.5px;
+  font-size: 22.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.FilmContainer {
+
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FilmContainer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.FilmContainer > div:nth-child(1) {
+  margin-top: 0;
+}
+
+.FilmContainer > div > div {
+  margin-left: 31px;
+}
+
+.FilmContainer > div > div:nth-child(1) {
+  margin-left: 0;
+}
+
+.CertainFilm {
+  position: relative;
+  width: 280px;
+  height: 385px;
+  border: white solid 1px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  box-shadow: 5px 8.5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.FilmName {
+  transition: 0.1s;
+}
+
+.CertainFilm:hover .FilmName {
+  font-weight: bold;
+}
+
+.CertainFilm > img {
+  width: 280px;
+  height: 385px;
+}
+
+.RowNewFilm > .CertainFilm {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.RowNewFilm:last-child > .CertainFilm:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.RowNewFilm:last-child > .CertainFilm:last-child > img {
+  width: 120px;
+  height: 120px;
+}
+
+.RowNewFilm:last-child > .CertainFilm:last-child:hover {
+  opacity: 0.7;
+}
+
+.RowNewFilm:last-child > .CertainFilm:last-child > .FilmConstraint {
+  display: none;
+}
+
+.newFilmInfo {
+  font-family: "Avenir Next";
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  margin-top: 15px;
+}
+
+.allFilms {
+  font-family: "Avenir Next";
+  font-size: 22.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.ArrowDownNewFilm {
+  margin-top: 35px;
+}
+
+.FilmConstraint {
+  position: absolute;
+  top: 0;
+  width: 280px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FilmConstraint > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FilmConstraint > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 20px;
+  border: solid 0.5px #000000;
+  background-color: #ffffff;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.FilmConstraint > div:last-child > img {
+  width: 27.5px;
+  height: 27.5px;
+}
+
+.FilmConstraint > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66.5px;
+  height: 25px;
+  border-radius: 100px;
+  border: solid 0.5px #000000;
+  background-color: #ffffff;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.FilmConstraint > div:nth-child(1) > div:nth-child(1) > p {
+  font-family: "Avenir Next";
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.FilmConstraint > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  border: solid 0.5px #ffffff;
+  background-color: #000000;
+  margin-right: 2px;
+  margin-top: 2px;
+}
+
+.FilmConstraint > div:nth-child(1) > div:nth-child(2) > p {
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.FilmName {
+  font-family: "Avenir Next";
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.allFilms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.allFilms > p {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.allFilmsFilters {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.allFilmsFilters > div > img {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.allFilmsFilters > div > img:hover {
+  opacity: 0.7;
+}
+
+.allFilmsFilters > div > img:nth-child(1) {
+  margin-left: 35px;
+}
+
+.allFilmsFilters > div > img:nth-child(2) {
+  margin-left: 50px;
+}
+
+.rowAllFilms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+/* -- */
+.rowAllFilms:first-child {
+  margin-top: 25px;
+}
+
+.rowAllFilms:nth-child(2) {
+  margin-top: 50px;
+}
+
+/* -- */
+.certainFilmAll {
+  position: relative;
+  width: 180px;
+  height: 250px;
+  border: white solid 1px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+  box-shadow: 5px 8.5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.certainFilmAll:hover .FilmName {
+  font-weight: bold;
+}
+
+.certainFilmAll > img {
+  width: 180px;
+  height: 250px;
+}
+
+.rowAllFilms > .certainFilmAll {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.allFilmConstraint {
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.allFilmConstraint > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allFilmConstraint > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 20px;
+  border: solid 0.5px #000000;
+  background-color: #ffffff;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.allFilmConstraint > div:last-child > img {
+  width: 27.5px;
+  height: 27.5px;
+}
+
+.allFilmConstraint > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66.5px;
+  height: 25px;
+  border-radius: 100px;
+  border: solid 0.5px #000000;
+  background-color: #ffffff;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.allFilmConstraint > div:nth-child(1) > div:nth-child(1) > p {
+  font-family: "Avenir Next";
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.allFilmConstraint > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  border: solid 0.5px #ffffff;
+  background-color: #000000;
+  margin-right: 2px;
+  margin-top: 2px;
+}
+
+.allFilmConstraint > div:nth-child(1) > div:nth-child(2) > p {
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.RLControl {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.RLControl > div > p {
+  font-family: "Avenir Next";
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.leftArrow, .rightArrow {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+  opacity: 0.5;
+}
+
+.rightArrow {
+  transform: scale(-1, 1);
+}
+
+.leftArrow {
+  cursor: default;
+}
+
+.containerForAllFilms {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 580px;
+}
+
+.registration {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.registerModalWindow {
+  width: 530px;
+  height: 380px;
+  background-color: #303030;
+  margin-bottom: 300px;
+  position: relative;
+
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginModalWindow {
+  width: 530px;
+  height: 280px;
+  background-color: #303030;
+  margin-bottom: 300px;
+  position: relative;
+
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameAction {
+  font-family: "Avenir Next";
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+  position: absolute;
+
+  bottom: 90%;
+}
+
+.elementsOfRegistration {
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 55px;
+  width: 100%;
+}
+
+.elementsOfLogin {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 55px;
+  width: 100%;
+}
+
+.elementsOfRegistration > div > input {
+
+  width: 420px;
+  height: 45px;
+  border-radius: 5px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+
+  font-family: "Avenir Next";
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-left: 5px;
+  color: #000000;
+}
+
+.elementsOfLogin > div > input {
+
+  width: 420px;
+  height: 45px;
+  border-radius: 5px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+
+  font-family: "Avenir Next";
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  padding-left: 5px;
+  color: #000000;
+}
+
+.regInput,
+.logInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+  height: 70px;
+}
+
+.regInput > span {
+  position: absolute;
+
+  margin-top: 5px;
+  padding-left: 5px;
+
+  font-family: "Avenir Next";
+  font-size: 15px;
+  color: #d15151;
+
+  bottom: 0;
+}
+
+.regInput:nth-child(2),
+.regInput:nth-child(3) {
+  margin-top: 15px;
+}
+
+.logInput:nth-child(2),
+.logInput:nth-child(3) {
+  margin-top: 15px;
+}
+
+.registerButtons {
+  margin-top: 10px;
+
+  width: 420px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginButtons {
+  margin-top: 10px;
+
+  width: 420px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registerButtons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.loginButtons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.registerButtons > div:hover,
+.loginButtons > div:hover {
+  opacity: 0.6;
+}
+
+.registerButtons > div:nth-child(1),
+.loginButtons > div:nth-child(1) {
+  width: 120px;
+  height: 47px;
+
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.registerButtons > div > p,
+.loginButtons > div > p {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 38px;
+}
+
+.registerButtons > div:nth-child(1) > p,
+.registerButtons > div:nth-child(2) > p,
+.loginButtons > div:nth-child(1) > p,
+.loginButtons > div:nth-child(2) > p {
+  font-family: "Avenir Next";
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.registerButtons > div:nth-child(2) > p,
+.loginButtons > div:nth-child(2) > p {
+  font-weight: bold;
+}
+
+.registerButtons > div:nth-child(2),
+.loginButtons > div:nth-child(2) {
+  width: 280px;
+  height: 47px;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.loginError {
+  position: absolute;
+  bottom: 65px;
+
+  font-family: "Avenir Next";
+  font-size: 15px;
+  color: #d15151;
+}
