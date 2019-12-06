@@ -193,12 +193,14 @@ main {
 
 .Slide:nth-child(2) {
   opacity: 0.5;
+
   transform: translateX(102%);
   cursor: pointer;
 }
 
 .Slide:last-child {
   opacity: 0.5;
+
   transform: translateX(-102%);
   cursor: pointer;
 }
@@ -235,11 +237,14 @@ main {
   cursor: default;
 }
 
+
 .SlideInformation > div {
+
   display: flex;
   flex-direction: row;
   height: 100%;
 }
+
 
 .SlideInformation > p {
   font-family: "Avenir Next";
@@ -254,12 +259,14 @@ main {
   margin-bottom: 2px;
 }
 
+
 .SlideInformation > div > div:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-self: center;
   margin-left: 13px;
 }
+
 
 .SlideInformation > div > div:nth-child(1) > p {
   font-family: "Avenir Next";
@@ -271,16 +278,19 @@ main {
   color: #ffffff;
 }
 
+
 .SlideInformation > div > div:nth-child(1) > p:nth-child(1) {
   font-size: 100px;
   font-weight: bold;
 }
+
 
 .SlideInformation > div > div:nth-child(1) > p:nth-child(2) {
   margin-top: -20px;
   font-size: 25px;
   margin-left: 20px;
 }
+
 
 .SlideInformation > div > div:nth-child(1) > p:nth-child(2) > span {
   font-weight: bold;
@@ -301,6 +311,7 @@ main {
   cursor: pointer;
   transition: 0.2s;
 }
+
 
 .SlideInformation > div > div:nth-child(2) > img:hover {
   opacity: 0.7;
@@ -323,11 +334,13 @@ main {
   transition: 0.2s;
 }
 
+
 .SlideInformation > div > div:nth-child(2) > div:hover {
   opacity: 0.7;
 }
 
 .SlideInformation > div > div:nth-child(2) > div > p {
+
   font-family: "Avenir Next";
   text-align: center;
   font-size: 20px;
@@ -339,6 +352,7 @@ main {
   color: #ffffff;
   height: 28px;
 }
+
 
 .crcl {
   width: 17px;
@@ -866,6 +880,7 @@ footer > div:nth-child(3) > p:nth-child(3) {
   justify-content: flex-start;
   height: 580px;
 }
+
 
 .registration {
   position: fixed;

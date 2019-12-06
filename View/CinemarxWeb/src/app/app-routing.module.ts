@@ -15,6 +15,7 @@ const routes: Routes = [
     component: MainPageComponent,
     data: {title: 'CinemarX'}
   },
+
   {
     path: 'admin',
     component: AdminPageComponent,

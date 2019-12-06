@@ -6,5 +6,8 @@ namespace Data.UnitOfWork.Interface
     {
         void SaveChanges();
         IPersonRepository PersonRepository { get; }
+        ICinemaRepository CinemaRepository { get; }
+        ICinemaNetworkRepository CinemaNetworkRepository { get; }
+        IFilmRepository FilmRepository { get; }
     }
 }

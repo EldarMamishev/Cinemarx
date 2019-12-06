@@ -8,7 +8,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegistrationController : ControllerBase
+    public class RegistrationController : Controller
     {
         private IUnitOfWork unitOfWork;
         private IPersonService personService;

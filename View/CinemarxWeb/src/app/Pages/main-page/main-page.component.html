@@ -21,6 +21,7 @@
 
       <div class="Auth">
         <div>
+
           <p class="Reg" (click)="registerShowWindow(true)">Реєстрація</p>
         </div>
         <div>
@@ -37,6 +38,7 @@
     <div class="Slides">
 
       <!-- Slides *ngFor() -->
+
       <div class="Slide" *ngFor="let i, of slide;" (click)="changeSlide(i.num)">
         <img [src]="i.img" alt="0">
         <span class="SlideInformation">
@@ -249,5 +251,4 @@
     </div>
 
   </div>
-
 </div>

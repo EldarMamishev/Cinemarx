@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 
 @Component({
@@ -11,6 +12,7 @@ export class MainPageComponent implements OnInit {
   newFilms: NewFilms[][];
   allFilms: NewFilms[][];
   displayFilmsScope: number[];
+
   numSlide = 0;
   correctLogIn = false;
 
@@ -23,6 +25,7 @@ export class MainPageComponent implements OnInit {
       new SlideInfo('Parasites', '8.1', '../../assets/Images/ImgForPresentationPage/Slides/1189411.jpg', 16, 2),
       new SlideInfo('Downton Abbey', '7.7', '../../assets/Images/ImgForPresentationPage/Slides/downton-abbey.jpg', 20, 3),
       new SlideInfo('RAMBO: last blood', '7.3', '../../assets/Images/ImgForPresentationPage/Slides/1*_thZ3hVed8XakCZe7Lua_Q.jpeg', 14, 4)];
+    
     this.newFilms =
       [[new NewFilms('Кримінальне чтиво', '../../assets/Images/ImgForPresentationPage/NewFilms/CriminalChtivo.jpg', '2D, 3D, 4DX', '18+', '-50%'),
         new NewFilms('Кримінальне чтиво', '../../assets/Images/ImgForPresentationPage/NewFilms/CriminalChtivo.jpg', '2D, 4DX', '18+', '-50%'),
@@ -67,6 +70,7 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
+
     setTimeout(() => this.slideAnimation(), 100);
     this.registerForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.minLength(4), Validators.email]],
@@ -243,6 +247,7 @@ export class SlideInfo {
   imdb: number;
   img: string;
   age: number;
+
   num: number;
 
   constructor(filmName, imdb, img, age, num) {
