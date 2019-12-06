@@ -7,15 +7,15 @@
 
             <form [formGroup]="cinemaAddForm" (ngSubmit)="onFormSubmit(cinemaAddForm.value)">
 
-            <div>
-                <p>Назва:</p>
-                <input id="cinemaName" type="text" formControlName="name">
-            </div>
+                <div>
+                    <p>Назва:</p>
+                    <input id="cinemaName" type="text" formControlName="name">
+                </div>
 
-            <div>
-                <p>Адреса:</p>
-                <input id="cinemaAddress" type="text" formControlName="address">
-            </div>
+                <div>
+                    <p>Адреса:</p>
+                    <input id="cinemaAddress" type="text" formControlName="address">
+                </div>
 
                 <div>
 
@@ -30,7 +30,7 @@
                 </div>
 
             </form>
-            
+
         </div>
 
     </div>
@@ -45,7 +45,7 @@
                 <p class="cinemaText">
                     {{i.name}}
                     |
-                <span>{{i.address}}</span>
+                    <span>{{i.address}}</span>
                 </p>
             </div>
 
@@ -54,22 +54,24 @@
     </div>
 
 
-    <div class="changeCertainCinema">
+    <div class="changeCertainCinema" [style.visibility]="selectedCinema !== -1 ? 'visible' : 'hidden'">
 
         <p>Редагувати налаштування кінотеатру</p>
 
-        <div class="Control" *ngIf="selectedCinema !== -1">
+        <div class="Control">
 
             <form [formGroup]="cinemaChangeForm" (ngSubmit)="onFormSubmit(cinemaChangeForm.value)">
 
                 <div>
                     <p>Назва:</p>
-                    <input id="cinemaChangeName" type="text" formControlName="name" [placeholder]="cinemas[selectedCinema].name">
+                    <input id="cinemaChangeName" type="text" formControlName="name"
+                           [placeholder]="cinemas[selectedCinema].name">
                 </div>
 
                 <div>
                     <p>Адреса:</p>
-                    <input id="cinemaChangeAddress" type="text" formControlName="address" [placeholder]="cinemas[selectedCinema].address">
+                    <input id="cinemaChangeAddress" type="text" formControlName="address"
+                           [placeholder]="cinemas[selectedCinema].address">
                 </div>
 
                 <div>
@@ -88,6 +90,8 @@
 
         </div>
 
+        <div class="deleteCinema"><p>Видалити кінотеатр</p></div>
+
     </div>
-    
+
 </div>

@@ -15,7 +15,7 @@
     justify-content: flex-start;
 
     width: 540px;
-    height: 1900px;
+    height: 900px;
 
     background-color: #d8d8d8;;
 }
@@ -116,7 +116,8 @@ form>div:nth-child(3) {
     width: 95%;
 }
 
-form>div:nth-child(3)>div {
+form>div:nth-child(3)>div,
+.deleteCinema {
 
     display: flex;
     align-items: center;
@@ -135,7 +136,8 @@ form>div:nth-child(3)>div:hover {
     opacity: 0.6;
 }
 
-form>div:nth-child(3)>div>p {
+form>div:nth-child(3)>div>p,
+.deleteCinema>p {
     font-family: "Avenir Next";
     font-size: 20px;
     font-weight: bold;
@@ -216,4 +218,11 @@ form>div:nth-child(3)>button:hover {
 
 .cinemaNameAndAddress>p>span {
     font-size: 15px;
+}
+
+.deleteCinema {
+    position: absolute;
+    width: 300px;
+
+    bottom: 50px;
 }
