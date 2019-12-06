@@ -1,19 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
+import { AdminPageComponent } from './Pages/admin-page/admin-page.component';
+import { CinemasAdminComponent } from './Pages/admin-page/cinemas-admin/cinemas-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    AdminPageComponent,
+    CinemasAdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,10 +21,11 @@
 
       <div class="Auth">
         <div>
-          <p class="Reg">Реєстрація</p>
+
+          <p class="Reg" (click)="registerShowWindow(true)">Реєстрація</p>
         </div>
         <div>
-          <p class="Log">Вхід</p>
+          <p class="Log" (click)="loginShowWindow(true)">Вхід</p>
         </div>
       </div>
 
@@ -37,7 +38,8 @@
     <div class="Slides">
 
       <!-- Slides *ngFor() -->
-      <div class="Slide" *ngFor="let i of slide">
+
+      <div class="Slide" *ngFor="let i, of slide;" (click)="changeSlide(i.num)">
         <img [src]="i.img" alt="0">
         <span class="SlideInformation">
           <div>
@@ -186,4 +188,67 @@
 
   </footer>
 
+  <div class="registration">
+
+    <div class="registerModalWindow">
+
+      <p class="nameAction">РЕЄСТРАЦІЯ</p>
+
+        <form class="elementsOfRegistration" [formGroup]="registerForm" (ngSubmit)="onFormSubmit(registerForm.value)">
+
+          <div class="regInput">
+            <input class="regInputField" type="email" formControlName="email" placeholder="E-mail" autofocus>
+            <span class="error" *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">Введенний E-mail є некоректним</span>
+          </div>
+
+          <div class="regInput">
+            <input class="regInputField" type="password" formControlName="password" placeholder="Пароль">
+            <span class="error" *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched">Пароль занадто простий, ускладніть його (a-Z0-9)</span>
+          </div>
+
+          <div class="regInput">
+            <input class="regInputField" type="password" formControlName="retryPassword" placeholder="Повторіть пароль">
+            <span class="error" *ngIf="!registerForm.get('retryPassword').valid && registerForm.get('retryPassword').touched">Паролі різні</span>
+          </div>
+
+          <div class="registerButtons">
+            <div (click)="registerShowWindow(false)"><p>Назад</p></div>
+            <div type="submit" *ngIf="registerForm.valid"><p>Зареєструватися</p></div>
+          </div>
+
+        </form>
+
+    </div>
+
+  </div>
+
+
+  <div class="login">
+
+    <div class="loginModalWindow">
+
+      <p class="nameAction">АВТОРИЗАЦІЯ</p>
+
+      <form class="elementsOfLogin" [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
+
+        <div class="logInput">
+          <input class="logInputField" type="email" formControlName="email" placeholder="E-mail" autofocus>
+        </div>
+
+        <div class="logInput">
+          <input class="logInputField" type="password" formControlName="password" placeholder="Пароль">
+        </div>
+
+        <span class="loginError" *ngIf="correctLogIn">Введені дані некоректні!</span>
+
+        <div class="loginButtons">
+          <div (click)="loginShowWindow(false)"><p>Назад</p></div>
+          <div type="submit" *ngIf="loginForm.valid"><p>Вхід</p></div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
 </div>

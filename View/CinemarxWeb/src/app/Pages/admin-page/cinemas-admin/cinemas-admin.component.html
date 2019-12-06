@@ -1,0 +1,93 @@
+<div class="mainScope">
+
+    <div class="addCinemaScope">
+        <p>Додати кінотеатр</p>
+
+        <div class="Control">
+
+            <form [formGroup]="cinemaAddForm" (ngSubmit)="onFormSubmit(cinemaAddForm.value)">
+
+            <div>
+                <p>Назва:</p>
+                <input id="cinemaName" type="text" formControlName="name">
+            </div>
+
+            <div>
+                <p>Адреса:</p>
+                <input id="cinemaAddress" type="text" formControlName="address">
+            </div>
+
+                <div>
+
+                    <div (click)="clearAddCinemaFields()">
+                        <p>Очистити поля</p>
+                    </div>
+
+                    <button type="submit" *ngIf="cinemaAddForm.valid">
+                        Додати
+                    </button>
+
+                </div>
+
+            </form>
+            
+        </div>
+
+    </div>
+
+
+    <div class="listOfCinemas">
+        <p>Всі кінотеатри</p>
+
+        <div class="Control">
+
+            <div class="cinemaNameAndAddress" *ngFor="let i of cinemas" (click)="selectCertainCinema(i.name)">
+                <p class="cinemaText">
+                    {{i.name}}
+                    |
+                <span>{{i.address}}</span>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="changeCertainCinema">
+
+        <p>Редагувати налаштування кінотеатру</p>
+
+        <div class="Control" *ngIf="selectedCinema !== -1">
+
+            <form [formGroup]="cinemaChangeForm" (ngSubmit)="onFormSubmit(cinemaChangeForm.value)">
+
+                <div>
+                    <p>Назва:</p>
+                    <input id="cinemaChangeName" type="text" formControlName="name" [placeholder]="cinemas[selectedCinema].name">
+                </div>
+
+                <div>
+                    <p>Адреса:</p>
+                    <input id="cinemaChangeAddress" type="text" formControlName="address" [placeholder]="cinemas[selectedCinema].address">
+                </div>
+
+                <div>
+
+                    <div (click)="clearChangeCinemaFields()">
+                        <p>Очистити поля</p>
+                    </div>
+
+                    <button type="submit" *ngIf="cinemaChangeForm.valid">
+                        Змінити
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    
+</div>
