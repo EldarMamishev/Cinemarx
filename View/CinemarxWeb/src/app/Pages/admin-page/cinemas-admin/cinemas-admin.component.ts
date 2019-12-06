@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
+import {AdminCinemaControlService} from "../../../Services/admin-cinema-control.service";
+import {CreateCinemaEntityClass} from "./create-cinema-entity-class";
+
 
 @Component({
     selector: 'app-cinemas-admin',
@@ -11,8 +14,9 @@ export class CinemasAdminComponent implements OnInit {
     selectedCinema = -1;
     cinemaAddForm: FormGroup;
     cinemaChangeForm: FormGroup;
+    newCinema: CreateCinemaEntityClass = new CreateCinemaEntityClass();
 
-    constructor(private formBuilder: FormBuilder) {
+    constructor(private formBuilder: FormBuilder, private createCinemaService: AdminCinemaControlService) {
         this.cinemas = [new currentCinemas('CinemarX', 'Napoleon street'),
             new currentCinemas('CinemarXXX', 'RedLight street')];
     }
@@ -31,6 +35,20 @@ export class CinemasAdminComponent implements OnInit {
 
     onFormSubmit(data: any) {
 
+    }
+
+    createCinema() {
+        this.newCinema.Caption = this.cinemaAddForm.get('name').value;
+        this.newCinema.Address = this.cinemaAddForm.get('address').value;
+
+        console.log('CinemaName: ' + this.newCinema.Caption + '\nCinemaAddress: ' + this.newCinema.Address);
+
+        this.createCinemaService.addCinema(this.newCinema)
+            .subscribe(res => {
+                console.log(res);
+            }, (err) => {
+                console.log(err);
+            });
     }
 
     clearAddCinemaFields() {
