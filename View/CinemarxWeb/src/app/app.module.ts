@@ -6,15 +6,11 @@ import {AppRoutingModule} from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
-import { AdminPageComponent } from './Pages/admin-page/admin-page.component';
-import { CinemasAdminComponent } from './Pages/admin-page/cinemas-admin/cinemas-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
-    AdminPageComponent,
-    CinemasAdminComponent
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
