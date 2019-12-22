@@ -1,0 +1,141 @@
+.AdminPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    background-color: #5f5f5f;
+    color: #ffffff;
+}
+
+.LeftSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 25%;
+    margin-left: 20px;
+
+    font-family: "Avenir Next";
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.LeftSide > p {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.LeftSide > p:hover {
+    opacity: 0.5;
+}
+
+.RightSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 20px;
+
+    font-family: "Avenir Next";
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.RightSide > p {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.RightSide > p:hover {
+    opacity: 0.5;
+}
+
+#mainAdminPageTab {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.DefaultMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 350px;
+}
+
+.DefaultMain > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 80px;
+
+    border: solid 2px #000000;
+    background-color: #d8d8d8;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.DefaultMain > div:last-child {
+    margin-left: 50px;
+}
+
+.DefaultMain > div:hover {
+    opacity: 0.7;
+}
+
+.DefaultMain > div > p {
+    font-family: "Avenir Next";
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+
+    height: 68.5px;
+}
+
+app-cinemas-admin {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
