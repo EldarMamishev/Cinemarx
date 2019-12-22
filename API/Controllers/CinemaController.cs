@@ -27,8 +27,8 @@ namespace API.Controllers
         [Route("create")]
         public ActionResult CreateCinema([FromBody] CreateCinemaRequest cinema)
         {
-            if (!ActiveStatus.ActiveUser.IsAdmin)
-                return this.BadRequest();
+            //if (!ActiveStatus.ActiveUser.IsAdmin)
+            //    return this.BadRequest();
 
             try
             {
@@ -46,8 +46,8 @@ namespace API.Controllers
         [Route("/update")]
         public ActionResult Update([FromBody] UpdateCinemaRequest cinema)
         {
-            if (!ActiveStatus.ActiveUser.IsAdmin)
-                return this.BadRequest();
+            //if (!ActiveStatus.ActiveUser.IsAdmin)
+            //    return this.BadRequest();
 
             try
             {
@@ -64,5 +64,10 @@ namespace API.Controllers
 
             return this.Ok(cinema);
         }
+
+        [HttpGet]
+        [Route("")]
+        public IEnumerable<CinemaViewModel> Get() => this.unitOfWork.CinemaRepository.GetAll()
+            .Select(f => new CinemaViewModel() { Id = f.Id, Caption = f.Caption, Description = f.Description, Address = f.Address});
     }
 }

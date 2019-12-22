@@ -1,9 +1,10 @@
-﻿using Data.UnitOfWork.Interface;
+﻿using Business.EntityService.Interface;
+using Data.UnitOfWork.Interface;
 using System;
 
 namespace Business.EntityService
 {
-    public sealed class PersonService
+    public sealed class PersonService : IPersonService
     {
         private IUnitOfWork unitOfWork;
         public void Verify(string email, string password)

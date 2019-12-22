@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Business.EntityService
 {
-    class CinemaService : ICinemaService
+    public class CinemaService : ICinemaService
     {
         private IUnitOfWork unitOfWork;
 
@@ -20,11 +20,18 @@ namespace Business.EntityService
 
         public void Add(string caption, string address, int? cinemaNetworkId, string city, string description, string email, string phoneNumber)
         {
-            CinemaNetworkEntity network = this.unitOfWork.CinemaNetworkRepository.GetById(cinemaNetworkId ?? 0);
+            CinemaNetworkEntity network = this.unitOfWork.CinemaNetworkRepository.GetById(cinemaNetworkId ?? 1);
+            
+            if(network == null)
+            {
+                network = new CinemaNetworkEntity() { Id = 1, WebSite = "Vizoria.ua" };
+                this.unitOfWork.CinemaNetworkRepository.Add(network);
+                this.unitOfWork.SaveChanges();
+            }
 
             CinemaEntity cinema = new CinemaEntity()
             {
-                CinemaNetworkId = network.Id,
+                CinemaNetworkId = network?.Id,
                 Address = address,
                 Caption = caption,
                 Description = description,

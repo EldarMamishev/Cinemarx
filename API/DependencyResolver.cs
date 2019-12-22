@@ -1,4 +1,6 @@
-﻿using Data;
+﻿using Business.EntityService;
+using Business.EntityService.Interface;
+using Data;
 using Data.Repository;
 using Data.UnitOfWork;
 using Data.UnitOfWork.Interface;
@@ -21,11 +23,16 @@ namespace API
         {
             services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ICinemaRepository, CinemaRepository>();
+            services.AddTransient<IFilmRepository, FilmRepository>();
+            services.AddTransient<ICinemaNetworkRepository, CinemaNetworkRepository>();
         }
 
         static void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IPersonService, PersonService>();
+            services.AddTransient<ICinemaService, CinemaService>();
+            services.AddTransient<IFilmService, FilmService>();
         }
     }
 }

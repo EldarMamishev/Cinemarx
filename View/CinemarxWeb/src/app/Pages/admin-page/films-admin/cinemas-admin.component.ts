@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
 import {AdminCinemaControlService} from "../../../Services/admin-cinema-control.service";
 import {CreateCinemaEntityClass} from "./create-cinema-entity-class";
-import { CinemaResponse } from './cinema-response';
-import { Observable } from 'rxjs';
+import { FilmResponse } from './film-response';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { Observable } from 'rxjs';
     styleUrls: ['./cinemas-admin.component.css']
 })
 export class CinemasAdminComponent implements OnInit {
-    cinemas: CinemaResponse[];
+    cinemas: FilmResponse[];
     selectedCinema = -1;
     cinemaAddForm: FormGroup;
     cinemaChangeForm: FormGroup;

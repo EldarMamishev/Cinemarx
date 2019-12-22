@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {CreateCinemaEntityClass} from "../Pages/admin-page/cinemas-admin/create-cinema-entity-class";
+import { CinemaResponse } from '../Pages/admin-page/cinemas-admin/cinema-response';
 
 const apiUrl = 'https://localhost:44328/api/';
 
@@ -17,6 +18,20 @@ export class AdminCinemaControlService {
     return this.http.post<any>(apiUrl + 'cinema/create', data)
         .pipe(
             catchError(this.handleError('create', []))
+        );
+  }
+
+  updateCinema(data: CinemaResponse): Observable<CinemaResponse> {
+    return this.http.post<any>(apiUrl + 'cinema/update', data)
+        .pipe(
+            catchError(this.handleError('update', []))
+        );
+  }
+
+  getCinemas(): Observable<CinemaResponse[]> {
+    return this.http.get<any>(apiUrl + 'cinema')
+        .pipe(
+            catchError(this.handleError('', []))
         );
   }
 
